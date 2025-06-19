@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*CONTEUDO PRINCIPAL*/
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: linear-gradient(rgb(83, 83, 83), rgb(25, 20, 20));
+    height: 100vh;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-principal {
+  background-color: rgb(15, 15, 15);
+  width: 550px;
+  height: 550px;
+  border: none;
+  border-radius: 7px;
+  text-align: center;
+}
+
+.logo-cp {
+  margin-top: 20px;
+  width: 30px;
+  transition: 0.4s ease;
+}
+
+.logo-cp:hover {
+  content: url("../assets/img/Spotify_Primary_Logo_RGB_Green.png");
+}
+
+#texto-entrar {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+}
+
+/*LOGINS-REDES SOCIAIS*/
+
+.logins {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.botao-login {
+  background-color: transparent;
+  border: solid 1px rgba(179, 179, 179, 0.3);
+  border-radius: 100px;
+  width: 230px;
+  height: 33px;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: border 0.2s ease;
+}
+
+.botao-login:hover {
+  border: solid 1px rgba(255, 255, 255);
+}
+
+.botao-login button {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  color: inherit;
+  font-size: inherit;
+}
+
+#linha-horizontal {
+  background-color: rgb(179, 179, 179, 0.3);
+  width: 360px;
+  height: 1px;
+  margin-top: 20px;
+}
+
+/*LOGINS- E-MAIL e USUARIO*/
+
+#caixa-email-usuario {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 230px;
+  margin: 0;
+  margin-top: 15px;
+}
+
+#caixa-email-usuario label {
+  color: rgb(255, 255, 255);
+  font-size: 10px;
+  text-align: left;
+  width: 100%;
+}
+
+#caixa-email-usuario input {
+  background-color: transparent;
+  border: solid 1px rgb(83, 83, 83);
+  width: 230px;
+  height: 33px;
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  transition: border 0.2s ease;
+  outline: none;
+}
+
+#caixa-email-usuario input:hover {
+  border: solid 1px rgb(255, 255, 255);
+}
+
+#caixa-email-usuario input::placeholder {
+  color: rgb(83, 83, 83);
+}
+
+/*BOTAO DE LOGIN e NAO TEM UMA CONTA*/
+
+#continuar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 230px;
+  margin: 0;
+  margin-top: 15px;
+}
+
+#botao-continuar {
+  background-color: rgb(29, 185, 84);
+  border: none;
+  border-radius: 100px;
+  width: 230px;
+  height: 33px;
+  color: rgb(15, 15, 15);
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+  padding: 10px 10px 10px 10px;
+}
+
+#botao-continuar:hover {
+  transform: scale(1.05);
+  color: rgb(255, 255, 255);
+}
+
+#nt-conta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 0;
+  margin-top: 15px;
+}
+
+#link-conta {
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+#link-conta a {
+  color: rgb(255, 255, 255);
+  transition: color 0.2s ease;
+}
+
+#link-conta a:hover {
+  color: rgb(29, 185, 84);
+}
+
+/*RESPONSIVIDADE PARA TELAS PEQUENAS (CELULAR)*/
+
+@media (max-width: 600px) {
+  .conteudo-principal {
+    width: 90%;
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .logo-cp {
+    width: 50px;
+  }
+
+  .logins {
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .botao-login,
+  #botao-continuar,
+  #caixa-email-usuario input {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  #linha-horizontal {
+    width: 90%;
+  }
+
+  #caixa-email-usuario {
+    width: 100%;
+  }
+
+  #continuar {
+    width: 100%;
+  }
+
+  #link-conta {
+    font-size: 13px;
+    text-align: center;
+  }
+}
